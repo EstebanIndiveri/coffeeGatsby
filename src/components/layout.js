@@ -9,9 +9,11 @@ import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import "./bootstrap.min.css";
 import "./layout.css";
+import Navbar from '../components/Global/Navbar';
 
 const Layout = ({ children }) => (
   <Fragment>
+    <Navbar/>
     {children}
   </Fragment>
 )
