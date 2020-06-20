@@ -10,11 +10,13 @@ import PropTypes from "prop-types";
 import "./bootstrap.min.css";
 import "./layout.css";
 import Navbar from '../components/Global/Navbar';
+import Footer from '../components/Global/Footer';
 
 const Layout = ({ children }) => (
   <Fragment>
     <Navbar/>
-    {children}
+      {children}
+    <Footer/>
   </Fragment>
 )
 
