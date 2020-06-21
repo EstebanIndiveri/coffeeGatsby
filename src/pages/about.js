@@ -18,15 +18,16 @@ const AboutPage = ({data}) => (
 )
 
 export const query = graphql`
-{
-  img: file(relativePath: { eq: "about-background.jpeg" }) {
-    childImageSharp {
-      fluid {
-        srcSetWebp
+  {
+    img: file(relativePath: { eq: "about-background.jpeg" }) {
+      childImageSharp {
+        fluid {
+          src
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
       }
     }
   }
-}
 `;
 
 export default AboutPage;
