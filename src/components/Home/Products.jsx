@@ -5,26 +5,24 @@ import {StaticQuery,graphql} from 'gatsby';
 
 const gerProduct=graphql`
 {
- products:allContentfulCoffeeProduct{
-  edges{
-    node{
-      id
-      title
-      price
-      image {
-        fluid(maxHeight:426){
-          src
-          ...GatsbyContentfulFluid_tracedSVG
-
+  products: allContentfulCoffeeProduct {
+    edges {
+      node {
+        id
+        title
+        price
+        image {
+          fluid(maxHeight: 426) {
+            src
+            ...GatsbyContentfulFluid_tracedSVG
+          }
         }
       }
     }
   }
 }
-}
+`;
 
-
-`
  
 export default function Products() {
     return (
