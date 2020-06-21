@@ -1,6 +1,6 @@
 import React from 'react';
-import {Link} from 'gatsby';
 import Title from '../Global/Title';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 const Info = () => {
     return ( 
@@ -12,9 +12,9 @@ const Info = () => {
                         <p className="lead text-muted mb-5">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio possimus ab doloremque repudiandae atque voluptatibus autem, perferendis facilis magni. Dolore soluta eos aut atque blanditiis numquam officiis esse rem impedit, sapiente veniam totam repellat corrupti? Corporis dignissimos nam ducimus ex, error quisquam quaerat fugit placeat adipisci molestias assumenda mollitia consectetur.
                         </p>
-                        <Link to="/about">
+                        <AniLink paintDrip hex="#ff9e09" duration={0.5}  to="/about">
                             <button className="btn text-uppercase btn-yellow">About Page</button>
-                        </Link>
+                        </AniLink>
                     </div>
                 </div>
             </div>

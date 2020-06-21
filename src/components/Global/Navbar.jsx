@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
-import {Link} from 'gatsby';
 import Logo from '../../images/logo.svg';
 import {FaCartArrowDown} from 'react-icons/fa';
-
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 
 export default class Navbar extends Component {
@@ -37,9 +36,12 @@ export default class Navbar extends Component {
     render() {
         return (
             <nav className="navbar navbar-expand-sm bg-light navbar-light">
-                <Link to="/" className="navbar-brand">
+                {/* <Link to="/" className="navbar-brand">
+                    
+                </Link> */}
+                <AniLink cover  to="/" bg="#ff9e09" className="navbar-brand">
                     <img src={Logo} alt=""/>
-                </Link>
+                </AniLink>
                 <button className="navbar-toggler" type="button" onClick={this.navBarHandler}>
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -47,13 +49,13 @@ export default class Navbar extends Component {
                         <ul className="navbar-nav mx-auto">
                             {this.state.links.map(link=>(
                                 <li key={link.id} className="nav-item">
-                                    <Link to={link.path} alt="" className="nav-link text-capitalize">
+                                    <AniLink  paintDrip hex="#ff9e09" duration={0.5} to={link.path} alt="" className="nav-link text-capitalize">
                                         {link.text}
-                                    </Link>
+                                    </AniLink>
                                 </li>
                             ))}
                             <li className="nav-item ml-sm-5">
-                                <FaCartArrowDown className="cart-icon"/>
+                                <FaCartArrowDown className="cart-icon snipcart-checkout"/>
                             </li>
                         </ul>
                     </div>
